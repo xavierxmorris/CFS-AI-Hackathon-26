@@ -1,0 +1,69 @@
+<?xml version="1.0" ?>
+<coverage version="7.4.0" timestamp="1712502612000" lines-valid="186"
+          lines-covered="158" line-rate="0.8495" branches-covered="42"
+          branches-valid="56" branch-rate="0.75" complexity="0">
+  <packages>
+    <package name="src" line-rate="0.8495" branch-rate="0.75" complexity="0">
+      <classes>
+
+        <class name="query_helper.py" filename="src/query_helper.py"
+               line-rate="1.0000" branch-rate="1.0" complexity="0">
+          <lines>
+            <line number="12" hits="4"/>
+            <line number="15" hits="4"/>
+            <line number="18" hits="4"/>
+            <line number="22" hits="3"/>
+            <line number="25" hits="3"/>
+          </lines>
+        </class>
+
+        <class name="payment_processor.py" filename="src/payment_processor.py"
+               line-rate="0.8235" branch-rate="0.7143" complexity="0">
+          <lines>
+            <line number="10" hits="6"/>
+            <line number="15" hits="6"/>
+            <line number="22" hits="4"/>
+            <line number="30" hits="4"/>
+            <line number="38" hits="2"/>
+            <line number="45" hits="0" branch="true" condition-coverage="0% (0/2)"/>
+            <line number="52" hits="0"/>
+            <line number="58" hits="0"/>
+          </lines>
+        </class>
+
+        <class name="account_manager.py" filename="src/account_manager.py"
+               line-rate="0.7778" branch-rate="0.6667" complexity="0">
+          <lines>
+            <line number="8" hits="5"/>
+            <line number="14" hits="5"/>
+            <line number="20" hits="3"/>
+            <line number="28" hits="3"/>
+            <line number="35" hits="0"/>
+            <line number="42" hits="0" branch="true" condition-coverage="0% (0/2)"/>
+            <line number="48" hits="2"/>
+            <line number="55" hits="2"/>
+            <line number="61" hits="0"/>
+          </lines>
+        </class>
+
+        <class name="seed_test_data.py" filename="src/seed_test_data.py"
+               line-rate="0.9091" branch-rate="1.0" complexity="0">
+          <lines>
+            <line number="5" hits="2"/>
+            <line number="12" hits="2"/>
+            <line number="18" hits="2"/>
+            <line number="25" hits="2"/>
+            <line number="30" hits="2"/>
+            <line number="35" hits="2"/>
+            <line number="40" hits="2"/>
+            <line number="45" hits="2"/>
+            <line number="50" hits="2"/>
+            <line number="55" hits="2"/>
+            <line number="60" hits="0"/>
+          </lines>
+        </class>
+
+      </classes>
+    </package>
+  </packages>
+</coverage>

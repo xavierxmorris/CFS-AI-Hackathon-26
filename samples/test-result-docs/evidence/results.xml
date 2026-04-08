@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<testsuites>
+  <testsuite name="pytest" errors="0" failures="1" skipped="1" tests="14" time="2.847"
+             timestamp="2026-04-07T14:30:12" hostname="ci-runner-03">
+
+    <!-- VIP Customer Lookup -->
+    <testcase classname="tests.test_payment_scenarios.TestVipCustomerLookup"
+              name="test_find_vip_customer_exists" time="0.012"/>
+    <testcase classname="tests.test_payment_scenarios.TestVipCustomerLookup"
+              name="test_vip_customer_has_multiple_accounts" time="0.008"/>
+
+    <!-- Failed Transactions -->
+    <testcase classname="tests.test_payment_scenarios.TestFailedTransactions"
+              name="test_failed_transactions_exist" time="0.010"/>
+    <testcase classname="tests.test_payment_scenarios.TestFailedTransactions"
+              name="test_failed_tx_has_description" time="0.009"/>
+    <testcase classname="tests.test_payment_scenarios.TestFailedTransactions"
+              name="test_frozen_account_tx_fails" time="0.015"/>
+
+    <!-- High-Value Transactions -->
+    <testcase classname="tests.test_payment_scenarios.TestHighValueTransactions"
+              name="test_high_value_tx_exists" time="0.011"/>
+    <testcase classname="tests.test_payment_scenarios.TestHighValueTransactions"
+              name="test_high_value_tx_amount_is_precise" time="0.009"/>
+    <testcase classname="tests.test_payment_scenarios.TestHighValueTransactions"
+              name="test_high_value_tx_is_completed" time="0.008"/>
+
+    <!-- Cross-Border Scenarios -->
+    <testcase classname="tests.test_payment_scenarios.TestCrossBorderScenarios"
+              name="test_non_usd_account_exists" time="0.007"/>
+    <testcase classname="tests.test_payment_scenarios.TestCrossBorderScenarios"
+              name="test_cross_border_tx_has_counterparty" time="0.010"/>
+
+    <!-- Dormant Account — one FAILURE -->
+    <testcase classname="tests.test_payment_scenarios.TestDormantAccountScenarios"
+              name="test_dormant_account_exists" time="0.009"/>
+    <testcase classname="tests.test_payment_scenarios.TestDormantAccountScenarios"
+              name="test_dormant_account_reactivation_sends_email" time="0.022">
+      <failure message="AssertionError: Expected email to be sent on reactivation">
+Traceback (most recent call last):
+  File "tests/test_payment_scenarios.py", line 142, in test_dormant_account_reactivation_sends_email
+    assert mock_email.called, "Expected email to be sent on reactivation"
+AssertionError: Expected email to be sent on reactivation
+      </failure>
+    </testcase>
+
+    <!-- Chargeback — one SKIPPED -->
+    <testcase classname="tests.test_payment_scenarios.TestChargebackScenarios"
+              name="test_reversed_tx_exists" time="0.008"/>
+    <testcase classname="tests.test_payment_scenarios.TestChargebackScenarios"
+              name="test_chargeback_notifies_merchant" time="0.000">
+      <skipped message="Merchant notification API not yet implemented"/>
+    </testcase>
+
+  </testsuite>
+</testsuites>
