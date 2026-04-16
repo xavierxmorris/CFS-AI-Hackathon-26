@@ -91,7 +91,11 @@ This sample includes a realistic legacy ASP.NET order-processing system
 | `PaymentService.cs` | ~130 | External payment gateway integration | HttpWebRequest, hardcoded coupling |
 | `Web.config` | ~30 | Connection strings and app settings | Secrets in config file |
 
-**You don't need .NET installed.** These are source files for Copilot to read — no compilation required.
+**You don't need .NET installed** to analyze the legacy files. These source files remain available for Copilot walkthroughs.
+
+A buildable .NET 8 implementation of the phased modernization now lives in
+[`modernized-sample/`](modernized-sample/), with interfaces, DI, secure configuration,
+and automated tests.
 
 ---
 
@@ -219,6 +223,7 @@ legacy-dotnet-analysis/
 │   ├── CustomerRepository.cs           ← ADO.NET data access + one SQL injection
 │   ├── PaymentService.cs               ← External gateway integration
 │   └── Web.config                      ← Legacy XML config with secrets
+├── modernized-sample/                  ← .NET 8 implementation of the modernization plan
 ├── example-outputs/
 │   ├── order-processor-explained.md    ← Plain English walkthrough
 │   ├── order-processor-flow.md         ← Mermaid sequence + flow diagrams

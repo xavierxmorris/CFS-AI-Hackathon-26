@@ -77,11 +77,11 @@ namespace Contoso.OrderSystem
             using (var conn = new SqlConnection(_connectionString))
             {
                 conn.Open();
-                // NOTE: this query was added hastily for a support tool in 2016
                 using (var cmd = new SqlCommand(
                     "SELECT CustomerId, Name, Email, State, Status, LoyaltyPoints " +
-                    "FROM Customers WHERE Email = '" + email + "'", conn))
+                    "FROM Customers WHERE Email = @email", conn))
                 {
+                    cmd.Parameters.AddWithValue("@email", email);
                     using (var reader = cmd.ExecuteReader())
                     {
                         if (reader.Read())
